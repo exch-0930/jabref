@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import net.sf.jabref.logic.util.OS;
 import net.sf.jabref.model.entry.FileField;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

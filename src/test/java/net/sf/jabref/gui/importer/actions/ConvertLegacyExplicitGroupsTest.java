@@ -10,6 +10,7 @@ import net.sf.jabref.model.groups.AllEntriesGroup;
 import net.sf.jabref.model.groups.ExplicitGroup;
 import net.sf.jabref.model.groups.GroupHierarchyType;
 import net.sf.jabref.model.groups.GroupTreeNode;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
