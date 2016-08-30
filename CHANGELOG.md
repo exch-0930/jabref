@@ -13,13 +13,14 @@ We refer to [GitHub issues](https://github.com/JabRef/jabref/issues) by using `#
 
 ### Changed
 - Added integrity check for fields with BibTeX keys, e.g., `crossref` and `related`, to check that the key exists
-- [#1496](https://github.com/JabRef/jabref/issues/1496) Keep track of which entry a downloaded file belongs to
 - Made it possible to download multiple entries in one action
+- [#1496](https://github.com/JabRef/jabref/issues/1496) Keep track of which entry a downloaded file belongs to
+- [#1506](https://github.com/JabRef/jabref/issues/1506) It is possible to apply two new key modifier `title` for Title Case and `camel` for Camel Case (difference is that title case will leave prepositions etc in lower case) 
 
 ### Fixed
 - Fixed NullPointerException when opening search result window for an untitled database 
-- Fixed [#1757](https://github.com/JabRef/jabref/issues/1757): Crash after saving illegal argument in entry editor
 - Fixed [#1663](https://github.com/JabRef/jabref/issues/1663): Better multi-monitor support
+- Fixed [#1757](https://github.com/JabRef/jabref/issues/1757): Crash after saving illegal argument in entry editor
 - Fixed [#1882](https://github.com/JabRef/jabref/issues/1882): Crash after saving illegal bibtexkey in entry editor
 
 ### Removed

@@ -11,6 +11,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.sf.jabref.MetaData;
+import net.sf.jabref.logic.formatter.casechanger.Title;
+import net.sf.jabref.logic.formatter.casechanger.TitleCaseFormatter;
 import net.sf.jabref.logic.formatter.casechanger.Word;
 import net.sf.jabref.logic.layout.format.RemoveLatexCommands;
 import net.sf.jabref.logic.util.strings.StringUtil;
@@ -509,6 +511,13 @@ public class BibtexKeyPatternUtil {
                     }
                     resultingLabel = abbreviateSB.toString();
 
+                } else if ("camel".equals(modifier)) {
+                    // CamelCasingOfEveryWord
+                    Title title = new Title(resultingLabel);
+                    title.getWords().stream().forEach(Word::toUpperFirst);
+                    resultingLabel = title.toString();
+                } else if ("title".equals(modifier)) {
+                    resultingLabel = new TitleCaseFormatter().format(resultingLabel);
                 } else if (!modifier.isEmpty() && (modifier.charAt(0) == '(') && modifier.endsWith(")")) {
                     // Alternate text modifier in parentheses. Should be inserted if
                     // the label is empty:
